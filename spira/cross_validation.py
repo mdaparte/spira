@@ -20,7 +20,8 @@ class ShuffleSplit(object):
         n_data = len(X.data)
         n_train = int(self.train_size * n_data)
 
-        for it in xrange(self.n_iter):
+        #for it in xrange(self.n_iter):
+        for it in range(self.n_iter):
             ind = rng.permutation(n_data)
             train_ind = ind[:n_train]
             test_ind = ind[n_train:]
